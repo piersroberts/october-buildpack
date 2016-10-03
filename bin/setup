@@ -1,0 +1,15 @@
+#! /bin/sh
+echo ' - starting building'
+
+SCRIPTS_PATH=`pwd`"/"`dirname $0`
+PROJECT_PATH=$SCRIPTS_PATH"/.."
+OCTOBER_PATH=$PROJECT_PATH"/october"
+
+cd $OCTOBER_PATH
+
+composer install
+
+php artisan october:up
+php artisan october:mirror ../www/
+#symlinks -cr ../www
+echo ' - finished building'
