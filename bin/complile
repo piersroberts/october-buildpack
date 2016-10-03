@@ -1,5 +1,8 @@
 #! /bin/sh
 echo ' - starting building'
+echo $1
+echo $2
+echo $3
 
 SCRIPTS_PATH=`pwd`"/"`dirname $0`
 PROJECT_PATH=$SCRIPTS_PATH"/.."
