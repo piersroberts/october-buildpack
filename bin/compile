@@ -4,7 +4,7 @@ echo ' - starting building'
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-OCTOBER_PATH=BUILD_DIR"/october"
+OCTOBER_PATH=$BUILD_DIR"/october"
 
 cd $OCTOBER_PATH
 
