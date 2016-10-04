@@ -8,7 +8,7 @@ OCTOBER_PATH=$BUILD_DIR"/october"
 
 cd $OCTOBER_PATH
 
-composer install
+composer update
 
 php artisan october:up
 php artisan october:mirror ../www/
