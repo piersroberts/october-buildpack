@@ -1,23 +1,10 @@
 #!/bin/sh
 echo ' - starting building'
 
-
+BUILD_DIR=$1
 CACHE_DIR=$2
 
-APT_CACHE_DIR="$CACHE_DIR/apt/cache"
-APT_STATE_DIR="$CACHE_DIR/apt/state"
-
-mkdir -p "$APT_CACHE_DIR/archives/partial"
-mkdir -p "$APT_STATE_DIR/lists/partial"
-
-APT_OPTIONS="-o debug::nolocking=true -o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR"
-
-apt-get $APT_OPTIONS update
-
-apt-get $APT_OPTIONS -y --force-yes -d install --reinstall symlinks
-export PATH="$BUILD_DIR/.apt/usr/bin:$PATH"
-
-OCTOBER_PATH=$1"/october"
+OCTOBER_PATH=BUILD_DIR"/october"
 
 cd $OCTOBER_PATH
 
