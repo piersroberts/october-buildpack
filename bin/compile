@@ -4,9 +4,7 @@ echo $1
 echo $2
 echo $3
 
-SCRIPTS_PATH=`pwd`"/"`dirname $0`
-PROJECT_PATH=$SCRIPTS_PATH"/.."
-OCTOBER_PATH=$PROJECT_PATH"/october"
+OCTOBER_PATH=$1"/october"
 
 cd $OCTOBER_PATH
 
