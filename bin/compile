@@ -1,8 +1,6 @@
 #!/bin/sh
 echo ' - starting building'
-echo $1
-echo $2
-echo $3
+apt-get -y --force-yes -d install --reinstall symlinks
 
 OCTOBER_PATH=$1"/october"
 
@@ -12,5 +10,5 @@ composer install
 
 php artisan october:up
 php artisan october:mirror ../www/
-#symlinks -cr ../www
+symlinks -cr ../www
 echo ' - finished building'
