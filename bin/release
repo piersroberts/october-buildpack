@@ -1,1 +1,4 @@
-echo RELEASE
+#!/bin/sh
+
+cat << EOF
+---
