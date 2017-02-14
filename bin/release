@@ -2,3 +2,6 @@
 
 cat << EOF
 ---
+default_process_types:
+  web: vendor/bin/heroku-php-nginx october
+EOF
